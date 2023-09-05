@@ -1,25 +1,16 @@
 <?php
 
 class Smashing_Updater {
-
 	private $file;
-
 	private $plugin;
-
 	private $basename;
-
 	private $active;
-
 	private $username;
-
 	private $repository;
-
 	private $authorize_token;
-
 	private $github_response;
 
 	public function __construct( $file ) {
-
 		$this->file = $file;
 
 		add_action( 'admin_init', array( $this, 'set_plugin_properties' ) );
